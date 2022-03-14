@@ -39,11 +39,22 @@ button {
 /* Header-Top */
 header {
   min-height: 83vh;
-  position: relative;
   background-image: url(/assignment-images/insertion-header.jpg);
   background-position: center;
   background-size: cover;
 }
+
+@media (max-width: 833px) {
+  header {
+    height: 87vh;
+  }
+}
+@media (orientation: portrait) {
+  header {
+    height: 100vh;
+  }
+}
+
 header .header_nav {
   justify-content: flex-end;
   overflow: hidden;
@@ -109,13 +120,37 @@ header .header_article h3 {
   font-weight: 300;
 }
 
-/* Hader-Bottom */
-header .header_form {
+/* Section-Images */
+#images {
+  position: relative;
+}
+#images,
+#contact-us {
+  padding: 120px 0;
+}
+@media (max-width: 833px) {
+  #images {
+    padding: 150px 0;
+  }
+}
+@media (max-width: 460px) {
+  #images {
+    padding: 180px 0;
+  }
+}
+
+.images {
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Images-Top */
+.images_form {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: absolute;
-  bottom: -8%;
+  top: -4%;
   gap: 10px;
   z-index: 20;
   left: 50%;
@@ -130,7 +165,7 @@ header .header_form {
   box-shadow: 0 0 8px 0px #000;
 }
 
-header .header_form .header_form--new-release {
+.images_form .images_form--new-release {
   font-weight: 400;
   text-transform: uppercase;
   background: url(/assignment-images/gradient-blue.png);
@@ -146,7 +181,7 @@ header .header_form .header_form--new-release {
   align-items: center;
 }
 
-header .header_form form {
+.images_form form {
   gap: 10px;
   width: 58%;
   display: flex;
@@ -154,7 +189,7 @@ header .header_form form {
   align-items: center;
 }
 
-header .header_form form input[type="text"],
+.images_form form input[type="text"],
 button {
   background: transparent;
   border: 1px solid #fff;
@@ -162,22 +197,22 @@ button {
   font-size: 1.1em;
   font-weight: 300;
 }
-header .header_form form input[type="text"] {
+.images_form form input[type="text"] {
   width: 75%;
 }
-header .header_form form input[type="text"]::placeholder {
+.images_form form input[type="text"]::placeholder {
   color: #fff;
 }
 
-header .header_form form button {
+.images_form form button {
   padding-inline: 40px;
 }
-header .header_form form button:hover {
+.images_form form button:hover {
   background-color: #fff;
   color: var(--light-red);
 }
 
-header .header_form .go {
+.images_form .go {
   font-size: 1.2em;
   letter-spacing: 1px;
   font-weight: 300;
@@ -186,65 +221,50 @@ header .header_form .go {
   padding: 10px;
   max-width: 25%;
 }
-header .header_form .go:hover {
+.images_form .go:hover {
   color: var(--blue);
 }
 @media (max-width: 835px) {
-  header .header_form {
+  .images_form {
     min-height: 15em;
-    bottom: -15%;
+    top: -8%;
     flex-direction: column;
-    width: 95%;
+    width: 90%;
   }
-  header .header_form .header_form--new-release {
+  .images_form .images_form--new-release {
     width: 100%;
     padding: 20px 0;
     border-radius: 14px 14px 0 0;
   }
-  header .header_form form {
+  .images_form form {
     width: 95%;
   }
-  header .header_form .go {
+  .images_form .go {
     max-width: 100%;
     margin-block: 10px;
   }
 }
+@media (max-width: 690px) {
+  .images_form {
+    top: -5%;
+  }
+}
 
 @media (max-width: 470px) {
-  header .header_form {
-    bottom: -19%;
+  .images_form {
+    top: -5%;
     min-height: 19em;
     font-size: 14px;
   }
-  header .header_form form {
+  .images_form form {
     flex-direction: column;
   }
 
-  header .header_form form input[type="text"] {
+  .images_form form input[type="text"] {
     width: 95%;
   }
 }
 
-/* Section-Images */
-#images,
-#contact-us {
-  padding: 120px 0;
-}
-
-.images {
-  gap: 30px;
-  flex-wrap: wrap;
-}
-@media (max-width: 833px) {
-  #images {
-    padding: 150px 0;
-  }
-}
-@media (max-width: 460px) {
-  #images {
-    padding: 180px 0;
-  }
-}
 .images div {
   position: relative;
 }
