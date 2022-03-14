@@ -76,6 +76,7 @@ header .header_nav .header_nav--links li a {
   text-transform: capitalize;
   color: #fff;
   font-weight: 300;
+  z-index: 40;
 }
 header .header_nav .header_nav--links li a:hover {
   color: var(--blue);
