@@ -49,11 +49,6 @@ header {
     height: 87vh;
   }
 }
-@media (orientation: portrait) {
-  header {
-    height: 100vh;
-  }
-}
 
 header .header_nav {
   justify-content: flex-end;
@@ -541,4 +536,11 @@ button {
 }
 .copy-right p {
   font-size: 0.9em;
+}
+
+/* landscpae */
+@media (orientation: landscape) {
+  header {
+    height: 120vh;
+  }
 }
