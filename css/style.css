@@ -542,8 +542,3 @@ button {
 }
 
 /* landscpae */
-@media (orientation: landscape) {
-  header {
-    height: 130vh;
-  }
-}
